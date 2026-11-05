@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Dimpal 💗</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Georgia,serif;
+  background:#100b20;
+  color:#fff;
+  text-align:center;
+  overflow-x:hidden;
+}
+button{cursor:pointer;font-family:inherit}
+.hidden{display:none!important}
+section{padding:65px 20px;position:relative}
+h1,h2{color:#ffd1e7}
+h1{font-size:clamp(35px,8vw,65px)}
+h2{font-size:30px;margin-bottom:20px}
+p{line-height:1.8;color:#f8dce9}
+.glow{
+  text-shadow:0 0 15px #ff70bd,0 0 35px #a64cff
+}
+.card{
+  max-width:650px;margin:25px auto;padding:28px;
+  border:1px solid #ffffff35;border-radius:25px;
+  background:linear-gradient(135deg,#ffffff16,#ff80bd12);
+  box-shadow:0 0 35px #e64fa52a;
+  backdrop-filter:blur(12px);
+}
+.pink{
+  border:0;border-radius:30px;padding:14px 25px;
+  color:white;background:linear-gradient(90deg,#ff55a7,#a45bff);
+  box-shadow:0 0 20px #ff55a777;font-size:16px;
+  margin:12px;
+}
+.small{font-size:14px;color:#e9c5dc}
+#lock{
+  min-height:100vh;display:flex;align-items:center;
+  justify-content:center;padding:20px;
+  background:radial-gradient(circle at top,#44204c,#100b20 65%);
+}
+.lockbox{max-width:390px;width:100%}
+.cat{
+  width:145px;height:115px;background:#fff0d8;
+  border-radius:48% 48% 45% 45%;margin:25px auto;
+  position:relative;animation:float 3s ease-in-out infinite;
+  box-shadow:0 12px 35px #ffb6d655;
+}
+.ear{
+  position:absolute;top:-17px;width:48px;height:50px;
+  background:#fff0d8;transform:rotate(45deg);
+  border-radius:10px 30px 5px 30px;z-index:-1;
+}
+.ear.left{left:5px}.ear.right{right:5px;transform:rotate(45deg)}
+.eye{
+  position:absolute;top:46px;width:10px;height:15px;
+  border-radius:50%;background:#493047;
+}
+.eye.left{left:42px}.eye.right{right:42px}
+.nose{
+  position:absolute;top:67px;left:68px;
+  width:9px;height:7px;background:#f28cae;
+  border-radius:50%;
+}
+.cheek{
+  position:absolute;top:70px;width:19px;height:9px;
+  background:#ffb6c9;border-radius:50%;opacity:.8;
+}
+.cheek.left{left:20px}.cheek.right{right:20px}
+.bow{
+  position:absolute;top:-19px;left:68px;
+  color:#ff4d9c;font-size:34px;
+}
+.lockbox input{
+  width:100%;padding:15px;border-radius:15px;
+  border:1px solid #ff9acb;background:#ffffff12;
+  color:white;text-align:center;font-size:18px;
+  margin:15px 0;outline:none;
+}
+#main{display:none}
+.hero{
+  min-height:90vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  background:radial-gradient(ellipse at top,#55254f,#100b20 70%);
+}
+.subtitle{font-style:italic;margin:15px}
+.sparkle{font-size:27px;letter-spacing:8px;margin:20px}
+.floating{
+  position:fixed;bottom:-40px;z-index:5;
+  pointer-events:none;animation:rise 9s linear forwards;
+}
+@keyframes rise{
+  to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+@keyframes float{50%{transform:translateY(-12px)}}
+.gallery{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:12px;max-width:700px;margin:25px auto;
+}
+.gallery img{
+  width:100%;height:220px;object-fit:cover;
+  border-radius:18px;border:2px solid #ffb6d8;
+  box-shadow:0 0 18px #ff7eb455;
+}
+.gallery img:last-child{grid-column:span 2;height:260px}
+.letter{text-align:left;white-space:pre-line;font-size:17px}
+.cake{font-size:85px;animation:float 2s infinite}
+#countdown{font-size:25px;color:#ffd0e7;margin-top:15px}
+footer{padding:35px;color:#e9b9d5}
+@media(max-width:420px){
+  .gallery img{height:165px}
+  .gallery img:last-child{height:190px}
+}
+</style>
+</head>
+
+<body>
+
+<div id="lock">
+  <div class="lockbox card">
+    <div style="font-size:35px">💎🌷💗</div>
+    <div class="cat">
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+      <div class="bow">🎀</div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="cheek left"></div>
+      <div class="cheek right"></div>
+    </div>
+    <h2 class="glow">A Little Surprise!</h2>
+    <p>Someone special has a surprise waiting for you 💌</p>
+    <input id="password" type="password" placeholder="Enter your secret password">
+    <button class="pink" onclick="unlock()">Open My Surprise 💗</button>
+    <p id="error" style="color:#ff9abf"></p>
+    <p class="small">Made with lots of love 🫶🏻</p>
+  </div>
+</div>
+
+<div id="main">
+
+<section class="hero">
+  <div class="sparkle">💎 🌻 🌷 💘</div>
+  <p class="subtitle">A little world made just for you...</p>
+  <h1 class="glow">Happy Birthday<br>Dimpal! 🎂</h1>
+  <p class="subtitle">You deserve all the happiness in the world 💗</p>
+  <button class="pink" onclick="document.getElementById('friend').scrollIntoView({behavior:'smooth'})">
+    Start the Surprise ✨
+  </button>
+  <p class="small">November 9 • A special day 💌</p>
+  <div id="countdown"></div>
+</section>
+
+<section id="friend">
+  <h2>One Special Question 💘</h2>
+  <div class="card">
+    <div style="font-size:45px">🫶🏻🌷</div>
+    <h1 style="font-size:35px">Be My Best Friend 😭💗</h1>
+    <p>Because some people make ordinary days feel special.</p>
+    <button class="pink" onclick="document.getElementById('answer').classList.remove('hidden')">
+      Of course! 💗
+    </button>
+    <p id="answer" class="hidden">Yayyy! Best friends forever! 🥹💎</p>
+  </div>
+</section>
+
+<section>
+  <h2>Our Beautiful Memories 📸</h2>
+  <p>Every picture has a little story of its own 🌻</p>
+  <div class="gallery">
+    <img src="photos/photo1.jpg" alt="Memory 1">
+    <img src="photos/photo2.jpg" alt="Memory 2">
+    <img src="photos/photo3.jpg" alt="Memory 3">
+    <img src="photos/photo4.jpg" alt="Memory 4">
+    <img src="photos/photo5.jpg" alt="Memory 5">
+  </div>
+</section>
+
+<section>
+  <h2>A Little Birthday Letter 💌</h2>
+  <div class="card letter">
+    Dear Dimpal,
+
+    Happy Birthday! 🎂💗
+
+    I hope your special day is filled with
+    happiness, laughter and beautiful memories.
+
+    May all your dreams come true.
+    Keep smiling, keep shining and always
+    stay the wonderful person you are.
+
+    You deserve the best things in life.
+    Thank you for being such a special friend.
+
+    Lots of wishes and good vibes! 🌻🫶🏻
+
+    With best wishes,
+    Your friend 💎
+  </div>
+</section>
+
+<section>
+  <h2>Make a Wish! 🎂</h2>
+  <div class="card">
+    <div class="cake">🎂</div>
+    <p>Close your eyes, make a wish and enjoy your special day! 🌷</p>
+    <button class="pink" onclick="celebrate()">Celebrate! 🎉</button>
+  </div>
+</section>
+
+<section>
+  <h2>One Last Thing 💘</h2>
+  <div class="card">
+    <div style="font-size:50px">💎🫶🏻🌻</div>
+    <p>Every beautiful friendship deserves beautiful memories.</p>
+    <h2 class="glow">Stay Happy Always! 💗</h2>
+    <p>Every love story is beautiful, but ours is my favourite.</p>
+    <div style="font-size:30px;margin-top:15px">🌷💌💘</div>
+  </div>
+</section>
+
+<footer>
+  Made with 💗 for Dimpal<br>
+  <span class="small">A little surprise, made with care ✨</span>
+</footer>
+
+</div>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="pink hidden"
+style="position:fixed;bottom:18px;right:15px;z-index:10"
+onclick="toggleMusic()">🎵 Play Music</button>
+
+<script>
+function unlock(){
+  const pass=document.getElementById("password").value;
+  if(pass==="0911"){
+    document.getElementById("lock").style.display="none";
+    document.getElementById("main").style.display="block";
+    document.getElementById("musicBtn").classList.remove("hidden");
+    startFloating();
+    countdown();
+  }else{
+    document.getElementById("error").textContent="Oops! Try again 💗";
+  }
+}
+
+const music=document.getElementById("music");
+function toggleMusic(){
+  if(music.paused){
+    music.play().then(()=>{
+      document.getElementById("musicBtn").textContent="⏸ Pause Music";
+    }).catch(()=>{
+      alert("Music file check karo!");
+    });
+  }else{
+    music.pause();
+    document.getElementById("musicBtn").textContent="🎵 Play Music";
+  }
+}
+
+function startFloating(){
+  const symbols=["💗","💘","🌷","🌻","💎","💌","🫶🏻"];
+  setInterval(()=>{
+    const el=document.createElement("div");
+    el.className="floating";
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*95+"vw";
+    el.style.fontSize=(20+Math.random()*20)+"px";
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),9000);
+  },650);
+}
+
+function countdown(){
+  function update(){
+    const now=new Date();
+    const birthday=new Date("2026-11-09T00:00:00");
+    const diff=birthday-now;
+    const el=document.getElementById("countdown");
+    if(diff<=0){
+      el.textContent="It's your special day! 🎂💗";
+      return;
+    }
+    const days=Math.floor(diff/86400000);
+    const hours=Math.floor(diff%86400000/3600000);
+    const mins=Math.floor(diff%3600000/60000);
+    const secs=Math.floor(diff%60000/1000);
+    el.textContent=days+" Days "+hours+" Hours "+mins+" Minutes "+secs+" Seconds";
+  }
+  update();
+  setInterval(update,1000);
+}
+
+function celebrate(){
+  for(let i=0;i<45;i++){
+    const el=document.createElement("div");
+    el.className="floating";
+    el.textContent=["🎉","💗","🌷","💎","🎊"][Math.floor(Math.random()*5)];
+    el.style.left=Math.random()*100+"vw";
+    el.style.fontSize="28px";
+    el.style.animationDuration=(3+Math.random()*4)+"s";
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),8000);
+  }
+}
+</script>
+</body>
+</html>
